@@ -1,4 +1,4 @@
-<html lang="en"><head>
+﻿<html lang="en"><head>
     <meta charset="utf-8">
     <title>Buffalo Botanical Gardens</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,7 +6,7 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -70,8 +70,11 @@
         <div class="span2">
           <b>Total Points: </b>300/450
         </div>
+      </div>
+      <div class="row">
         <div id="plantList">
         </div>
+      </div>
         
       </div>
 
@@ -80,32 +83,33 @@
       <footer>
         <p>© Company 2013</p>
       </footer>
-      <div id="gameModal" class="modal hide fade">
+      <!--<div id="gameModal" class="modal hide fade">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h3>Mystery Plant</h3>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" id="mbody">
           <div class="row">
-          </br>
-        </br>
-            <div class="span2">
-             <b> This plant is worth:</b>
-            </br>
-              100 points
+            <div class="span2" id="hintdiv"> </br>
+                <div id="hintdiv1">	<input type="button" id ="ht1" class="btn btn-info" data-toggle ="button" value="Hint 1"></a></br></br></br></div>
+		        <div id="hintdiv2"> <input type="button" id ="ht2" class="btn btn-info" data-toggle ="button" value="Hint 2"></a></br></br></br> </div> 
+		        <div id="hintdiv3"> <input type="button" id ="ht3" class="btn btn-info" data-toggle ="button" value="Hint 3"></a> </div>
             </div>
-            <div class="span2">
+            <div class="span2 offset1">
                   <img style="opacity:1000;height:200px;" src='http://www.untiredwithloving.org/palm_tree_2.jpg' />
             </div>
-            <a href="#" class="btn btn-info">Hint</a>
-           
           </div>
         </div>
         <div class="modal-footer">
-           <input type="text">
-           <a href="#" class="btn btn-primary">Submit</a>
+        	<div class="row"> 
+        		<div class="span2" align="left">        	
+        			<b> score: </b>
+           		</div>
+           			<input type="text">
+           			<a href="#" class="btn btn-primary" onclick="submit()">Submit</a>
+           </div>
         </div>
       </div>
+      
+      
     </div> <!-- /container -->
 
     <!-- Le javascript
