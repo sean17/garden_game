@@ -45,6 +45,13 @@ $("#plantList").empty();
 var plantArray = plantList.list;
 var score = 0;
 
+
+//exchange ' ' with '_' for scientificname
+for (i=0;i<plantArray.length;i++){
+    plantArray[i].scientific = plantArray[i].scientific.replace(' ','_');
+
+
+
 for(var i=0; i<plantArray.length; i++) {
   $("#plantList").append("<div class='span2'><a href='#"+plantArray[i].scientific+"modal' data-toggle='modal'> <img value='"+plantArray[i].scientific+"'style='height:200px;' src='"+plantArray[i].image+"'/></a></div>")
 
