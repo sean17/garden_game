@@ -43,9 +43,9 @@ $(function()
 
             for(var i =0; i < questions.length; i++){
               if (questions[i].guessing_game_question.plant.plant_photos[0]){
-                $("#matchDiv").append("<div class='span3'><a href='#"+questions[i].guessing_game_question.id+"' data-toggle='modal'> <img alt='aasdfasdfasdf' style='height:200px;' src='"+"http://www.botanicalapp.com/"+ questions[i].guessing_game_question.plant.plant_photos[0].plant_photo.image.url+"'/></a></div>")
+                $("#matchDiv").append("<div class='span3'><a href='#"+questions[i].guessing_game_question.id+"' data-toggle='modal'> <img style='height:200px;width:250px' src='"+"http://www.botanicalapp.com/"+ questions[i].guessing_game_question.plant.plant_photos[0].plant_photo.image.url+"'/></a></div>")
               } else {
-                $("#matchDiv").append("<div class='span3'><a href='#"+questions[i].guessing_game_question.id+"' data-toggle='modal'> <img alt='aasdfasdfasdf' style='height:200px;' src='"+"favicon.png"+"'/></a></div>")
+                $("#matchDiv").append("<div class='span3'><a href='#"+questions[i].guessing_game_question.id+"' data-toggle='modal'> <img  style='height:200px;width:250px' src='"+"favicon.png"+"'/></a></div>")
               }
             }
             var plant_photo = ""
@@ -72,7 +72,7 @@ $(function()
                 '<div style="height:50px"> <input type="button" class="btn btn-info" data-toggle ="button" onClick="this.value = this.name; totalScore -=25" name="'+questions[i].guessing_game_question.hint3+'" value="Hint 3"></a></br></br></br></div>'+
                 "</div>"+
                 "<div class='span2 offset1'>"+
-                "<img style='opacity:1000;height:200px;'' src='"+ plant_photo+"'/>"+
+                "<img style='height:200px;width:250px' src='"+ plant_photo+"'/>"+
                 "</div>"+
                 "</div>"+
                 "</div>"+
@@ -82,7 +82,7 @@ $(function()
                 "<b>  </b>"+
                 "</div>"+
                 "<input class='guess' type='text'>"+
-                "<input type='submit' align='right' class='btn btn-primary submit' value='Submit' name=' ' id='sub_"+questions[i].guessing_game_question.plant_id+"'>"+
+                "<input type='submit' align='right' class='btn btn-primary submit' value='Submit' name=' ' id='sub_"+questions[i].guessing_game_question.plant_id+"'><div class='answer'></div> "+
                             // "<a href='#' id='"+plantArray[i].scientifice+"submit' class='btn btn-primary'>Submit</a>"+
                             "</div>"+
                             "</div>"
@@ -106,7 +106,10 @@ $(".submit").click(function(){
       $("#score").html('<b>Total Score : </b>'+totalScore + " / "+totalPointsAvailable)
       $(this).parent().html('You have guessed the correct plant! </br> '+this.name)
       $(this).remove()
-      $("#")
+    } else 
+    {
+     $(".answer").text('try again please!') // var parent = $(this).parent()
+      // $(".guess > .answer").text('try again')
     }
   })
 }
